@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Reenie+Beanie&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Fredoka', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+}
+
+.header-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: white;
+}
+
+.site-title {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #5E367C;
+  margin-bottom: 0.5rem;
+}
+
+.site-description {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #666;
+  font-weight: 400;
+}
+
+.main-content {
+  padding-top: 3rem;
+}
+
+.letter-card {
+  transition: all 0.3s ease;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.letter-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.letter-card p {
+  flex-grow: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.card-variant-1 {
+  background: #fff1f1;
+  border: 2px solid #ffa4a4;
+}
+
+.card-variant-2 {
+  background: #f0f7ff;
+  border: 2px solid #90caf9;
+}
+
+.card-variant-3 {
+  background: #f6f3ff;
+  border: 2px solid #b39ddb;
+}
+
+.card-variant-4 {
+  background: #fff8e1;
+  border: 2px solid #ffd54f;
+}
+
+.card-variant-5 {
+  background: #f1f8e9;
+  border: 2px solid #aed581;
+}
+
+.letter-input {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e1e1e1;
+  transition: all 0.3s ease;
+}
+
+.letter-input:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 8px 32px rgba(108, 92, 231, 0.15);
+  transform: translateY(-2px);
+}
+
+select.letter-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  padding-right: 2.5rem;
+}
+
+input.letter-input {
+  height: 56px;
+}
+
+.btn-primary {
+  @apply px-8 py-3 rounded-full font-semibold text-white transition-all duration-300;
+  background: #5E367C;
+  border: none;
+  box-shadow: 0 4px 15px rgba(94, 54, 124, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(94, 54, 124, 0.4);
+  background: #6f4191;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5E367C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 3.5rem;
+  }
+
+  .site-description {
+    font-size: 16px;
+  }
+
+  .form-container {
+    padding: 0 1rem;
+  }
+
+  .letter-card {
+    height: 220px;
+  }
+}
+
+@media (max-width: 640px) {
+  .flex.gap-4.mb-4 {
+    flex-direction: column;
+  }
+
+  .w-48 {
+    width: 100%;
+  }
+
+  .site-title {
+    font-size: 2.8rem;
+  }
+}
